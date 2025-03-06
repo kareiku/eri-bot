@@ -17,7 +17,7 @@ async function invoke(interaction) {
         await interaction.deferReply();
         await interaction.deleteReply();
 
-        console.log(`Stopping bot logged as ${interaction.client.user.tag}...`);
+        console.log(`Stopping bot logged in as ${interaction.client.user.tag}...`);
 
         process.exit(0);
     } else {

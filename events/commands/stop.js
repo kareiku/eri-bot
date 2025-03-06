@@ -16,6 +16,9 @@ async function invoke(interaction) {
     if (allowedUsers.includes(user)) {
         await interaction.deferReply();
         await interaction.deleteReply();
+
+        console.log(`Stopping bot logged as ${interaction.client.user.tag}...`);
+
         process.exit(0);
     } else {
         await interaction.reply('You\'re not allowed to turn me off!');

@@ -3,13 +3,13 @@ import { SlashCommandBuilder } from 'discord.js';
 function create() {
     const command = new SlashCommandBuilder()
         .setName('ping')
-        .setDescription('a');
+        .setDescription('Replies with the current ping.');
 
     return command.toJSON();
 }
 
-function invoke(interaction) {
-    interaction.reply({ content: `Latency: FIXMEms` });
+async function invoke(interaction) {
+    await interaction.reply({ content: `Latency: ${Date.now() - interaction.createdTimestamp}ms` });
 }
 
 export { create, invoke };

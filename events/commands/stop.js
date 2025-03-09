@@ -10,7 +10,7 @@ function create() {
 
 async function invoke(interaction) {
     const user = await interaction.user.id;
-    const allowedUsers = process.env.ALLOWED_USERS.split(',');
+    const allowedUsers = process.env.ALLOWED_USERS_IDS.split(',');
 
     while(!user || !allowedUsers);
     if (allowedUsers.includes(user)) {

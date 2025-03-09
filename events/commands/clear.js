@@ -19,7 +19,7 @@ async function invoke(interaction) {
     if (interaction.guild.members.me.permissions.has(PermissionFlagsBits.ManageMessages)) {
         await interaction.channel.bulkDelete(Math.floor(Math.abs(interaction.options.getNumber('quantity'))));
     } else {
-        interaction.channel.send("I don't have permissions to delete messages from others.");
+        interaction.channel.send('I don\'t have permissions to delete messages from others.');
     }
 }
 

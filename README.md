@@ -1,6 +1,6 @@
 # Eri Bot
 
-Eri is a bot for Discord, written in discord.js v14.
+Eri, a Discord bot written in discord.js v14.
 
 ## Environment Variables
 
